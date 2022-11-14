@@ -147,9 +147,8 @@ SSO 토큰을 인증방식으로 해서 리다이렉트할 주소를 넘기면 �
 [Request]
 const mysiteLogin = async () => {
   const result = await request({
-    method: 'POST',
-    uri: `https://api.solapi.com/appstore/v2/sso/connect-homepage`,
-    body: { redirectUri: 'https://solapi.com' },
+    method: 'GET',
+    uri: `https://api.solapi.com/appstore/v2/sso/connect-homepage?redirecturi='https://solapi.com'`,    
     json: true,
     // SSO 토큰 값 설정
     headers: { Authorization: `sso ##SSO TOKEN ##` }
