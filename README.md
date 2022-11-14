@@ -51,8 +51,8 @@ SSO를 이용하기 위해서는 솔라피의 마이사이트가 필요합니다
 [Requset]
 const moment = require('moment-timezone')
 const { HmacSHA256 } = require('crypto-js')
-const apiKey = 'NCSYKPCCJ22222ZR'
-const apiSecret = 'MMLS20I0VKXD6NUS19A222224ZAFZPCP'
+const apiKey = '##API_KEY##'
+const apiSecret = '##API_SECRET##'
 
 // API KEY, API SECRET 으로 인증값 만들어 헤더에 설정
 const getApiKeyAuthHeader = () => {
@@ -87,7 +87,7 @@ getSSOToken()
 ```
 [Response]
 {
-  ssoToken: 'eyJhbGciOiJIUzI1NiIsInR53216IkpXVCJ9.eyJhcHBJZCI6Ik123U5zQUUzYUp5QiIsIm1lbWJlcklkIjoiTUVNemNhZHo0WmVoUGkiLCJhY2NvdW50SWQiOiIyMjExMDgxODA5NzEwMiIsImlhdCI6MTY2Nzg4MzY5N30.rKGE_xa1ONf5vXn14wIu6nlNLeNVst0gEJ_b9E9rReI'
+  ssoToken: 'eyJhbGciOiJIUzI1NiIsInR53216IkpXVCJ9.eyJhcHBJZCI6Ik123U5zQUUzYUp5QiIsIm1lbWJlcklkIjoiTUVNemNhZHo0WmVoUGkiLCJhY2NvdW50SWQiOiIyMjExMDgxODA5NzEwMiIsImlhdCI6MTY2Nzg4MzY5N30.rKGE_xa1ONf5vXn14wI23nlNLeNVst0gEJ_b9E9rReI'
 }
 ```
 
