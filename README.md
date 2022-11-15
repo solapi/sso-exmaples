@@ -29,11 +29,11 @@ SSO를 이용하기 위해서는 솔라피의 마이사이트가 필요합니다
 생성된 마이사이트 오른쪽에 있는 '마이사이트 관리'를 클릭하면 관리 페이지로 갈 수 있습니다.
 이곳에서 마이사이트에 가입한 회원들을 보고 관리할 수 있습니다.
 
-![image](https://user-images.githubusercontent.com/4575603/200468976-5516e89d-2c15-44b8-b8d2-073e5a5141b5.png)
+![image](https://user-images.githubusercontent.com/4575603/201792766-ecbc2143-ca1b-42fd-af04-938a8a0ba042.png)
 
-위쪽 주소창에 'mysite/' 뒷 부분에 적혀있는 것이 **앱 아이디** 입니다.
+'마이사이트 관리' 버튼을 클릭하여 들어가면 보이는 위쪽 주소창에 'mysite/' 뒷 부분에 적혀있는 것이 **앱 아이디** 입니다.
 
-![image](https://user-images.githubusercontent.com/4575603/200469372-786848b4-6507-4a57-bca3-c8749c5a3010.png)
+![image](https://user-images.githubusercontent.com/4575603/201793333-ac52fa56-f819-428e-a775-3271a3720300.png)
 
 
 
