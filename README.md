@@ -40,9 +40,11 @@ SSO를 이용하기 위해서는 솔라피의 마이사이트가 필요합니다
 
 
 ### 2. 관리자에게 IP 허용 요청
-화면 오른쪽 아래 상담창에 마이사이트의 앱아이디와 함꼐 관리자에게 IP 허용을 요청합니다.
+화면 오른쪽 아래 상담창에 마이사이트의 앱아이디와 함께 관리자에게 IP 허용을 요청합니다.
+허용이된 IP에서만 SSO 토큰을 이용한 API 사용이 가능합니다.
 
-![image](https://user-images.githubusercontent.com/4575603/201592913-38d693f2-93eb-4e84-acb3-cfd211e166d3.png)
+![image](https://user-images.githubusercontent.com/4575603/201794545-08e03acb-6b37-438c-8695-17f458732473.png)
+
 
 
 
@@ -193,5 +195,4 @@ mysiteLogin()
 왼쪽 **문자보내기** 메뉴에서 문자 발송을 바로 시도해보실 수 있으십니다.
 
 ![image](https://user-images.githubusercontent.com/4575603/201790537-1612727f-5da3-4c2f-a5e3-4b9f5e3b8dde.png)
-
 
