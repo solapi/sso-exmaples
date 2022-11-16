@@ -192,7 +192,9 @@ mysiteLogin()
 ![image](https://user-images.githubusercontent.com/4575603/201790537-1612727f-5da3-4c2f-a5e3-4b9f5e3b8dde.png)
 
 
-[Site](http://solapi.com) |. 
-[API Refernces Docs](https://developers.solapi.dev/references/appstore/connectToken) |. 
-[Examples](https://github.com/solapi/solapi-sso-sdk/tree/master/examples) |. 
+
+# [관련문서]
+[Site](http://solapi.com) |
+[API Refernces Docs](https://developers.solapi.dev/references/appstore/connectToken) |
+[Examples](https://github.com/solapi/solapi-sso-sdk/tree/master/examples) |
 
