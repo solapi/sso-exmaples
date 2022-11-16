@@ -193,7 +193,7 @@ mysiteLogin()
 
 
 
-# [관련문서]
+## [관련문서]
 [Site](http://solapi.com) |
 [API Refernces Docs](https://developers.solapi.dev/references/appstore/connectToken) |
 [Examples](https://github.com/solapi/solapi-sso-sdk/tree/master/examples) |
