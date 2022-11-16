@@ -12,7 +12,7 @@
 
 
 # SSO 토큰으로 솔라피 API 호출 방법 
-[예제코드는 솔라피 SSO Examples 코드를 참조하였습니다.](https://github.com/solapi/sso-exmaples)
+[예제코드는 솔라피 SSO Examples 코드를 참조하였습니다.](https://github.com/solapi/sso-exmaples/blob/main/node/examples.js)
 
 ### 1. 마이사이트 만들기 & 앱 아이디 발급
 SSO를 이용하기 위해서는 솔라피의 마이사이트가 필요합니다.  
@@ -176,7 +176,6 @@ mysiteLogin()
 ![image](https://user-images.githubusercontent.com/4575603/201789219-2db29bb9-37cc-403a-8595-067a149349f8.png)
 
 
-
 ### 2. 본인인증 진행
 
 ![image](https://user-images.githubusercontent.com/4575603/201789368-dedce174-916d-4900-a01a-4f2df60bc851.png)
@@ -187,14 +186,13 @@ mysiteLogin()
 ![image](https://user-images.githubusercontent.com/4575603/201790312-7fbd81fa-521a-40be-a17f-f1fe7697ae9c.png)
 
 
-처음 본인인증을 진행하시면 무료로 300포인트가 지급되어,
-
+처음 본인인증을 진행하시면 무료로 300포인트가 지급되어,  
 왼쪽 **문자보내기** 메뉴에서 문자 발송을 바로 시도해보실 수 있으십니다.
 
 ![image](https://user-images.githubusercontent.com/4575603/201790537-1612727f-5da3-4c2f-a5e3-4b9f5e3b8dde.png)
 
-[Site](http://solapi.com) |
-[SSO Docs](https://docs.solapi.com/authentication/authentication-sso-1) |
-[API Refernces Docs](https://docs.solapi.com/api-reference/api-sso) |
-[Examples](https://github.com/solapi/solapi-sso-sdk/tree/master/examples) |
+
+[Site](http://solapi.com) |. 
+[API Refernces Docs](https://developers.solapi.dev/references/appstore/connectToken) |. 
+[Examples](https://github.com/solapi/solapi-sso-sdk/tree/master/examples) |. 
 
