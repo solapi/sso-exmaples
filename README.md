@@ -137,23 +137,37 @@ getMemberInfo()
 
 
 # SSO 토큰으로 마이사이트 로그인 방법
-[예제코드는 솔라피 SSO Examples 코드를 참조하였습니다.](https://github.com/solapi/sso-exmaples)
-
-**SSO 토큰으로 솔라피 API 호출 방법**과 SSO 토큰 발급방법은 같아서 생략하겠습니다.
 
 ### 마이사이트 로그인 & 페이지 이동
 SSO 토큰을 쿼리값으로 아래 주소로 보내면 로그인이 완료된채로 보내주신 리다이렉트 주소로 이동합니다.
+처음에는 접속시 아래 이미지 처럼 본인인증을 해주셔야합니다.
+
+![image](https://user-images.githubusercontent.com/4575603/202633460-49f42eba-38cf-4e06-bf1b-3766173dc09d.png)
+
+
 
 ```
 [메인페이지로 이동]
 https://api.solapi.com/appstore/v2/sso/connect-homepage?redirecturi=#{마이사이트주소}/dashboard
+```
+![image](https://user-images.githubusercontent.com/4575603/202633585-cc5cfd01-c4b1-4592-a83e-d3f27153da75.png)
 
-[발신번호로 이동]
-https://api.solapi.com/appstore/v2/sso/connect-homepage?redirecturi=#{마이사이트주소}/senderids
 
+```
 [발신번호로 이동]
 https://api.solapi.com/appstore/v2/sso/connect-homepage?redirecturi=#{마이사이트주소}/senderids
 ```
+![image](https://user-images.githubusercontent.com/4575603/202634168-070adc80-589e-4da8-8976-658822ee055d.png)
+
+
+```
+[충전페이지로 이동]
+https://api.solapi.com/appstore/v2/sso/connect-homepage?redirecturi=#{마이사이트주소}/balance
+```
+![image](https://user-images.githubusercontent.com/4575603/202634622-67451921-ff7e-4bad-bf07-1a1af10c4674.png)
+
+
+
 
 
 ---
