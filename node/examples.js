@@ -62,7 +62,7 @@ const getSSOToken = async () => {
 /** SSO 토큰 발급 END */
 
 
-/** SSO 토큰 사용 */
+/** SSO 토큰으로 API 요청 */
 
 // Case 1. SSO 토큰으로 API 요청
 // SSO 토큰을 인증방식으로 사용시 IP 허용이 필요합니다.
@@ -78,14 +78,17 @@ const getMemberInfo = async () => {
 }
 // getMemberInfo()
 
-// Case 2. 발급받은 SSO 토큰으로 Access Token 발급
-// 발급받은 SSO 토큰으로 마이사이트에 로그인 합니다.
-// 해당 요청시 설정하신 redirectUri로 redirect됩니다.
+/** SSO 토큰으로 API 요청 END */
+
+
+/** SSO 토큰으로 로그인 & 리다이렉트 */
+
+// 해당 요청시 SSO 토큰으로 마이사이트에 로그인 후 설정하신 redirectUri로 redirect됩니다.
 const mysiteLogin = async () => {
   const redirectUri = 'https://mysite.solapi.com/dashboard'
   const result = await request({
     method: 'GET',
-    uri: `${host}appstore/v2/sso/connect-homepage?redirectUri=${redirectUri}`,
+    uri: `${host}appstore/v2/sso/connect-homepage?redirectUri=${redirectUri}&ssoToken=${ssoToken}`,
     json: true,
     headers: SSOTokenHeader
   })
@@ -94,3 +97,16 @@ const mysiteLogin = async () => {
 // mysiteLogin()
 
 /** SSO 토큰 사용 END */
+
+
+/** SSO 토큰으로 페이지로 이동 */
+
+// 웹 브라우저에서 호출, 메인 페이지로 이동
+const loginUri = `${mysiteUri}/api/appstore/v2/sso/connect-homepage?redirectUri=${mysiteUri}/dashboard&ssoToken=${ssoToken}`
+// console.log(loginUri)
+
+// 웹 브라우저에서 호출, 발신번호 관리 페이지로 이동 (인증이 되어있지 않으면 인증 폼이 뜹니다.
+const senderIdsUri = `${mysiteUri}/api/appstore/v2/sso/connect-homepage?redirectUri=${mysiteUri}/senderids&ssoToken=${ssoToken}`
+// console.log(senderIdsUri)
+
+/** SSO 토큰으로 페이지로 이동 END */
