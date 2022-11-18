@@ -141,60 +141,25 @@ getMemberInfo()
 
 **SSO 토큰으로 솔라피 API 호출 방법**과 SSO 토큰 발급방법은 같아서 생략하겠습니다.
 
-### 1. 마이사이트 로그인 처리
-SSO 토큰을 인증방식으로 해서 리다이렉트할 주소를 넘기면 로그인이 성공되며 자동으로 해당 주소로 넘어가게 됩니다.
-
-
-```
-[Request]
-const mysiteLogin = async () => {
-  const result = await request({
-    method: 'GET',
-    uri: `https://api.solapi.com/appstore/v2/sso/connect-homepage?redirecturi='https://solapi.com'`,    
-    json: true,
-    // SSO 토큰 값 설정
-    headers: { Authorization: `sso ##SSO TOKEN ##` }
-  })
-}
-mysiteLogin()
-```
+### 마이사이트 로그인 & 페이지 이동
+SSO 토큰을 쿼리값으로 아래 주소로 보내면 로그인이 완료된채로 보내주신 리다이렉트 주소로 이동합니다.
 
 ```
-[Reesponse]
-<Login & Redirect>
+[메인페이지로 이동]
+https://api.solapi.com/appstore/v2/sso/connect-homepage?redirecturi=#{마이사이트주소}/dashboard
+
+[발신번호로 이동]
+https://api.solapi.com/appstore/v2/sso/connect-homepage?redirecturi=#{마이사이트주소}/senderids
+
+[발신번호로 이동]
+https://api.solapi.com/appstore/v2/sso/connect-homepage?redirecturi=#{마이사이트주소}/senderids
 ```
 
 
 ---
-# 이용전 확인 사항
-
-위 과정들을 진행하게 되면 입력하신 정보로 마이사이트의 회원가입이 완료되며 로그인 또한 가능하실 겁니다.  
-솔라피 API 이용을 위해서는 본인인증이 필수이기 떄문에 아래와 같은 순서로 마이사이트에 로그인하여 본인인증을 진행하게 됩니다.
-
-### 1. 마이사이트 로그인
-
-![image](https://user-images.githubusercontent.com/4575603/201789219-2db29bb9-37cc-403a-8595-067a149349f8.png)
-
-
-### 2. 본인인증 진행
-
-![image](https://user-images.githubusercontent.com/4575603/201789368-dedce174-916d-4900-a01a-4f2df60bc851.png)
-
-
-### 3. 본인인증 성공 & 문자 발송 기능 이용
-
-![image](https://user-images.githubusercontent.com/4575603/201790312-7fbd81fa-521a-40be-a17f-f1fe7697ae9c.png)
-
-
-처음 본인인증을 진행하시면 무료로 300포인트가 지급되어,  
-왼쪽 **문자보내기** 메뉴에서 문자 발송을 바로 시도해보실 수 있으십니다.
-
-![image](https://user-images.githubusercontent.com/4575603/201790537-1612727f-5da3-4c2f-a5e3-4b9f5e3b8dde.png)
-
 
 
 ## [관련문서]
 [Site](http://solapi.com) |
 [API Refernces Docs](https://developers.solapi.dev/references/appstore/connectToken) |
-[Examples](https://github.com/solapi/solapi-sso-sdk/tree/master/examples) |
 
