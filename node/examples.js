@@ -20,8 +20,9 @@ const apiSecret = '##API_SECRET##'
 
 // 마이사이트 앱 아이디를 입력해주세요.
 // ssoToken 값은 getSSOToken()을 실행하여 나오는 결과값을 입력해주시면 됩니다.
-const appId = '#APP_ID##'
+const appId = '##APP_ID##'
 const ssoToken = '##SSO_TOKEN##'
+const mysiteUri = '##마이사이트 주소##'
 
 // API KEY, API SECRET 으로 인증값 만들어 헤더에 설정
 const getApiKeyAuthHeader = () => {
@@ -85,10 +86,9 @@ const getMemberInfo = async () => {
 
 // 해당 요청시 SSO 토큰으로 마이사이트에 로그인 후 설정하신 redirectUri로 redirect됩니다.
 const mysiteLogin = async () => {
-  const redirectUri = 'https://mysite.solapi.com/dashboard'
   const result = await request({
     method: 'GET',
-    uri: `${host}appstore/v2/sso/connect-homepage?redirectUri=${redirectUri}&ssoToken=${ssoToken}`,
+    uri: `${host}/api/appstore/v2/sso/connect-homepage?redirectUri=${mysiteUri}&ssoToken=${ssoToken}`,
     json: true,
     headers: SSOTokenHeader
   })
