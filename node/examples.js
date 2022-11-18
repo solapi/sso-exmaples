@@ -22,6 +22,8 @@ const apiSecret = '##API_SECRET##'
 // ssoToken 값은 getSSOToken()을 실행하여 나오는 결과값을 입력해주시면 됩니다.
 const appId = '##APP_ID##'
 const ssoToken = '##SSO_TOKEN##'
+
+// 마이사이트 주소를 입력해주시면 됩니다. 예) https://mystie.solapi.com
 const mysiteUri = '##마이사이트 주소##'
 
 // API KEY, API SECRET 으로 인증값 만들어 헤더에 설정
@@ -58,7 +60,6 @@ const getSSOToken = async () => {
   })
   console.log(result)
 }
-// getSSOToken()
 
 /** SSO 토큰 발급 END */
 
@@ -77,7 +78,6 @@ const getMemberInfo = async () => {
   })
   console.log(result)
 }
-// getMemberInfo()
 
 /** SSO 토큰으로 API 요청 END */
 
@@ -94,19 +94,16 @@ const mysiteLogin = async () => {
   })
   console.log(result)
 }
-// mysiteLogin()
 
 /** SSO 토큰 사용 END */
 
 
 /** SSO 토큰으로 페이지로 이동 */
 
-// 웹 브라우저에서 호출, 메인 페이지로 이동
-const loginUri = `${mysiteUri}/api/appstore/v2/sso/connect-homepage?redirectUri=${mysiteUri}/dashboard&ssoToken=${ssoToken}`
-// console.log(loginUri)
+// 메인 페이지로 이동
+console.log(`${mysiteUri}/api/appstore/v2/sso/connect-homepage?redirectUri=${mysiteUri}/dashboard&ssoToken=${ssoToken}`)
 
-// 웹 브라우저에서 호출, 발신번호 관리 페이지로 이동 (인증이 되어있지 않으면 인증 폼이 뜹니다.
-const senderIdsUri = `${mysiteUri}/api/appstore/v2/sso/connect-homepage?redirectUri=${mysiteUri}/senderids&ssoToken=${ssoToken}`
-// console.log(senderIdsUri)
+// 발신번호 관리 페이지로 이동 (인증이 되어있지 않으면 인증 폼이 뜹니다.
+console.log(`${mysiteUri}/api/appstore/v2/sso/connect-homepage?redirectUri=${mysiteUri}/senderids&ssoToken=${ssoToken}`)
 
 /** SSO 토큰으로 페이지로 이동 END */
